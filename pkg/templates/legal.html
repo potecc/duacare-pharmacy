@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Legal & Policies - Duacare Pharmacy{% endblock %}
+
+{% block content %}
+<section class="hero" style="background-color: var(--duacare-white); padding-bottom: 40px;">
+    <div class="container text-center">
+        <h1 style="color: var(--duacare-green);">Legal & Policies</h1>
+        <p style="color: var(--text-primary);">Important information regarding your privacy and purchases.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container" style="max-width: 800px;">
+        <div class="card mb-4" style="border-top: 4px solid var(--duacare-green);">
+            <h2 style="color: var(--duacare-dark-green);"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                Customer data is handled with strict confidentiality. All personal, medical, and prescription
+                information provided to Duacare Pharmacy & Stores is securely stored and used <strong>solely for service
+                    delivery</strong>. We do not sell or share your information with third parties.
+            </p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--duacare-gold);">
+            <h2 style="color: var(--duacare-dark-green);"><i class="fa-solid fa-arrow-rotate-left"></i> Refund Policy
+            </h2>
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                For health and safety compliance, <strong>payments are final</strong> after a medication has left the
+                pharmacy premises. Refunds and returns are strictly discretionary and will be considered only under
+                <em>exceptional circumstances</em>, such as dispensing errors.
+            </p>
+            <p>If you have questions regarding a product, please speak to the pharmacist immediately upon pick-up or
+                delivery.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

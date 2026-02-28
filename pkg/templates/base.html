@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Meta Tags -->
+    <meta name="description"
+        content="Duacare Pharmacy & Stores offers trusted, professional pharmaceutical care and everyday medical/grocery needs in Benin City. Your Health, Our Priority.">
+    <meta name="keywords"
+        content="pharmacy, healthcare, benin city, duacare, medicines, clinic, pharmacist, health, wellness">
+    <meta name="author" content="Duacare Pharmacy">
+
+    <!-- OpenGraph (Social Media Formatting) -->
+    <meta property="og:title" content="Duacare Pharmacy & Stores">
+    <meta property="og:description"
+        content="A community-focused health and wellness brand providing reliable, warm, and professional healthcare solutions alongside your everyday grocery needs.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.duacarepharmacy.com">
+    <!-- <meta property="og:image" content="link-to-brand-logo.jpg"> -->
+
+    <title>{% block title %}Duacare Pharmacy & Stores{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 512 512%22><path fill=%22%2300A859%22 d=%22M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z%22/></svg>">
+
+    <!-- Google Fonts: Playfair Display (Headings) & Lato (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Basics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🎉 Free delivery on orders over ₦20,000! <a href="{{ url_for('services') }}">Shop Now</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="{{ url_for('home') }}" class="navbar-brand">
+                <i class="fa-solid fa-notes-medical"></i> <!-- Placeholder Logo Icon -->
+                Duacare Pharmacy
+            </a>
+
+            <div class="navbar-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <ul class="navbar-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('services') }}">Services</a></li>
+                <li><a href="{{ url_for('careers') }}">Careers</a></li>
+                <li><a href="{{ url_for('investors') }}">Investors</a></li>
+                <li><a href="{{ url_for('contact') }}" class="btn btn-primary"
+                        style="color: white; padding: 8px 16px;">Contact Us</a></li>
+            </ul>
+
+            <!-- Store Actions -->
+            <div class="navbar-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search medicines...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348080792764" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Duacare Pharmacy & Stores</h3>
+                    <p>Your Health, Our Priority.</p>
+                    <p>For your everyday health and grocery needs.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="{{ url_for('about') }}">About Us</a></li>
+                        <li><a href="{{ url_for('careers') }}">Careers</a></li>
+                        <li><a href="{{ url_for('investors') }}">Investors</a></li>
+                        <li><a href="{{ url_for('legal') }}">Legal & Policies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p style="margin-bottom: 5px;"><i class="fa-solid fa-location-dot"></i> 22A Etete Road, G.R.A Benin
+                        City, Edo State</p>
+                    <p style="margin-bottom: 5px;"><i class="fa-brands fa-whatsapp"></i> +234 808 079 2764</p>
+                    <p style="margin-bottom: 5px;"><i class="fa-solid fa-envelope"></i> info@duacarepharmacy.com</p>
+                </div>
+                <!-- Newsletter Signup -->
+                <div class="footer-newsletter">
+                    <h3>Subscribe</h3>
+                    <p style="margin-bottom: 10px;">Get health tips and exclusive store offers.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Duacare Pharmacy & Stores. All rights reserved. | <a href="{{ url_for('legal') }}"
+                        style="color: var(--duacare-gold);">Privacy & Refund Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

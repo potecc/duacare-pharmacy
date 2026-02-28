@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Duacare Pharmacy{% endblock %}
+
+{% block content %}
+<section class="hero bg-green" style="padding: 60px 0;">
+    <div class="container text-center">
+        <h1 style="color: var(--duacare-white);">Get in Touch</h1>
+        <p style="color: var(--duacare-white);">We are open and ready to serve your health and grocery needs.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+            <!-- Contact Details -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="color: var(--duacare-dark-green);">Contact Information</h2>
+                <div style="margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 5px;"><i class="fa-solid fa-location-dot"
+                            style="color: var(--duacare-green); width: 25px;"></i> Visit Us</h4>
+                    <p style="margin-top: 0; padding-left: 25px;">22A Etete Road,<br>G.R.A Benin City</p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 5px;"><i class="fa-brands fa-whatsapp"
+                            style="color: var(--duacare-green); width: 25px;"></i> Call/WhatsApp</h4>
+                    <p style="margin-top: 0; padding-left: 25px;">
+                        <a href="https://wa.me/2348080792764" target="_blank"
+                            style="font-weight: bold; font-size: 1.1rem;">+234 808 079 2764</a><br>
+                        <em>Fastest response via WhatsApp</em>
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <h4 style="margin-bottom: 5px;"><i class="fa-solid fa-envelope"
+                            style="color: var(--duacare-green); width: 25px;"></i> Email</h4>
+                    <p style="margin-top: 0; padding-left: 25px;"><a
+                            href="mailto:contact@duacarepharmacy.com">contact@duacarepharmacy.com</a></p>
+                    <!-- Example generic email -->
+                </div>
+
+                <h3 class="mt-4" style="color: var(--duacare-gold);">Operating Hours</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><strong>Mon - Fri:</strong> 8:00 AM - 9:00 PM</li>
+                    <li><strong>Saturday:</strong> 9:00 AM - 8:00 PM</li>
+                    <li><strong>Sunday:</strong> 10:00 AM - 6:00 PM</li>
+                </ul>
+            </div>
+
+            <!-- Map/Location Placeholder -->
+            <div
+                style="flex: 1; min-width: 300px; border-radius: var(--border-radius-soft); overflow: hidden; box-shadow: var(--box-shadow); min-height: 400px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.187802871322!2d5.602330775825708!3d6.31952009366961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1040d3a77ccdebfd%3A0xe5a3bb406c641f9!2s22A%20Etete%20Rd%2C%20Oka%20300102%2C%20Benin%20City%2C%20Edo%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1709425835261!5m2!1sen!2sus"
+                    width="100%" height="100%" style="border:0; display: block;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

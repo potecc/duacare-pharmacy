@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Duacare Pharmacy{% endblock %}
+
+{% block content %}
+<section class="hero" style="background-color: var(--duacare-white); padding-bottom: 40px;">
+    <div class="container text-center">
+        <h1 style="color: var(--duacare-green);">About Duacare Pharmacy</h1>
+        <p style="color: var(--text-primary); max-width: 800px; margin: 0 auto;">
+            Duacare Pharmacy & Stores is a fast-growing community pharmacy located in Benin City, Nigeria. Founded by a
+            licensed Pharmacist, Duacare was established to bridge the gap between accessible healthcare, professional
+            pharmaceutical services, and everyday household needs.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch;">
+            <!-- Mission -->
+            <div
+                style="flex: 1; min-width: 300px; background-color: var(--duacare-green); color: white; padding: 40px; border-radius: var(--border-radius-soft);">
+                <i class="fa-solid fa-bullseye fa-3x mb-4" style="color: var(--duacare-gold);"></i>
+                <h2 style="color: white; margin-top: 0;">Our Mission</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    To deliver safe, reliable, and affordable healthcare while supporting everyday wellness for
+                    individuals and families.
+                </p>
+            </div>
+
+            <!-- Vision -->
+            <div
+                style="flex: 1; min-width: 300px; background-color: var(--duacare-light-grey); padding: 40px; border-radius: var(--border-radius-soft); border-left: 5px solid var(--duacare-gold);">
+                <i class="fa-solid fa-eye fa-3x mb-4" style="color: var(--duacare-green);"></i>
+                <h2 style="color: var(--duacare-dark-green); margin-top: 0;">Our Vision</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-primary);">
+                    To become a leading tech-enabled pharmacy and wellness brand across Southern Nigeria.
+                </p>
+            </div>
+        </div>
+
+        <!-- Community Impact appended here -->
+        <div style="margin-top: 60px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h2 style="color: var(--duacare-dark-green);">Community Impact</h2>
+            <p style="font-size: 1.1rem; color: var(--text-secondary);">
+                Duacare actively supports community health education, preventive care initiatives, affordable access to
+                medicines, and job creation within the local community.
+            </p>
+            <a href="{{ url_for('services') }}" class="btn btn-primary mt-4">View Our Services</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

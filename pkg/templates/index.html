@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero bg-green">
+    <div class="container">
+        <h1>Your Health, Our Priority</h1>
+        <p>For your everyday health and grocery needs.</p>
+        <p style="margin-top: 15px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Duacare Pharmacy & Stores is a trusted community health and wellness hub providing quality medicines,
+            professional pharmaceutical care, and essential groceries — all in one convenient location.
+        </p>
+        <div style="margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+            <a href="{{ url_for('contact') }}" class="btn btn-secondary">Visit Our Store</a>
+            <a href="{{ url_for('pharmacist') }}" class="btn btn-secondary">Talk to a Pharmacist</a>
+            <a href="https://wa.me/2348080792764" target="_blank" class="btn btn-gold"
+                style="color: var(--duacare-dark-green);"><i class="fa-brands fa-whatsapp"></i> Order via WhatsApp</a>
+            <a href="#" class="btn btn-primary"
+                style="background-color: transparent; border: 2px solid var(--duacare-white); cursor: default;">Online
+                Ordering (Coming Soon)</a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Categories Section -->
+<section class="section bg-light text-center">
+    <div class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="grid-4">
+            <a href="{{ url_for('services') }}" class="category-card">
+                <i class="fa-solid fa-pills fa-2x"></i>
+                <h4>Prescription Drugs</h4>
+            </a>
+            <a href="{{ url_for('services') }}" class="category-card">
+                <i class="fa-solid fa-basket-shopping fa-2x"></i>
+                <h4>Everyday Groceries</h4>
+            </a>
+            <a href="{{ url_for('services') }}" class="category-card">
+                <i class="fa-solid fa-bottle-droplet fa-2x"></i>
+                <h4>Vitamins & Supplements</h4>
+            </a>
+            <a href="{{ url_for('services') }}" class="category-card">
+                <i class="fa-solid fa-pump-soap fa-2x"></i>
+                <h4>Personal Care</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section bg-white text-center">
+    <div class="container">
+        <h2 class="section-title">Why Choose Duacare Pharmacy?</h2>
+        <div class="grid-3">
+            <div class="card">
+                <i class="fa-solid fa-user-doctor fa-3x" style="color: var(--duacare-green); margin-bottom: 20px;"></i>
+                <h3>Professional Care</h3>
+                <p>Licensed pharmacists & trained staff providing trusted, family-friendly care.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-basket-shopping fa-3x"
+                    style="color: var(--duacare-green); margin-bottom: 20px;"></i>
+                <h3>Integrated Model</h3>
+                <p>An integrated pharmacy & grocery model. All your health and household needs in one accessible
+                    location.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-mobile-screen fa-3x"
+                    style="color: var(--duacare-green); margin-bottom: 20px;"></i>
+                <h3>Future-Ready Care</h3>
+                <p>Future-ready digital healthcare services designed for your convenience and safety.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trusted Brands -->
+<section class="brand-strip">
+    <div class="container text-center">
+        <h3
+            style="color: var(--text-secondary); margin-bottom: 20px; font-size: 1.1rem; font-family: var(--font-body);">
+            Brands We Trust</h3>
+        <div class="brand-logos">
+            <div class="brand-placeholder">Emzor</div>
+            <div class="brand-placeholder">GSK</div>
+            <div class="brand-placeholder">Fidson</div>
+            <div class="brand-placeholder">Nestle</div>
+            <div class="brand-placeholder">M&B</div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section bg-white text-center">
+    <div class="container">
+        <h2 class="section-title">What Our Community Says</h2>
+        <div class="grid-3">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"Duacare is a lifesaver. I can pick up my prescriptions and fresh groceries all
+                    in one stop. The pharmacists are always so helpful!"</p>
+                <h4>— Sarah O.</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="review-text">"The staff is incredibly knowledgeable and kind. Their testing services are fast,
+                    and prices are very affordable. Highly recommended!"</p>
+                <h4>— David E.</h4>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="review-text">"I love how I can casually ask questions on WhatsApp and get reliable advice
+                    before walking in or ordering my supplements."</p>
+                <h4>— Maryam A.</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Impact Banner -->
+<section class="section" style="background-color: var(--duacare-light-grey); text-align: center;">
+    <div class="container">
+        <h2>Community Impact</h2>
+        <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+            Duacare actively supports community health education, preventive care initiatives, affordable access to
+            medicines, and job creation within the local community.
+        </p>
+        <a href="{{ url_for('about') }}" class="btn btn-primary mt-4">Learn More About Us</a>
+    </div>
+</section>
+{% endblock %}

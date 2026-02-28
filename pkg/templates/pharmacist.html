@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Talk to a Pharmacist - Duacare Pharmacy{% endblock %}
+
+{% block content %}
+<section class="section" style="background-color: var(--duacare-light-grey);">
+    <div class="container pt-5">
+        <div class="card" style="max-width: 800px; margin: 0 auto; padding: 40px;">
+            <div class="text-center mb-4">
+                <i class="fa-solid fa-user-nurse fa-4x" style="color: var(--duacare-green);"></i>
+                <h1 class="mt-4" style="color: var(--duacare-dark-green);">Talk to a Pharmacist</h1>
+                <p>We are here for you. Whether you need advice on a medication, have questions about symptoms, or want
+                    to understand your prescription better, our experts are just a message away.</p>
+            </div>
+
+            <div
+                style="background-color: var(--duacare-light-grey); padding: 20px; border-radius: var(--border-radius-soft); margin-bottom: 30px; border-left: 4px solid var(--duacare-green);">
+                <h3 style="margin-top:0;">Fastest Option</h3>
+                <p class="mb-0">For immediate assistance during business hours, please reach out via WhatsApp!</p>
+                <a href="https://wa.me/2348080792764" class="btn btn-primary mt-4" target="_blank"><i
+                        class="fa-brands fa-whatsapp"></i> Chat with Pharmacist</a>
+            </div>
+
+            <hr style="border:1px solid #ddd; margin: 30px 0;">
+
+            <h3 class="text-center">Submit a Health Inquiry</h3>
+            <form id="inquiryForm" style="display: flex; flex-direction: column; gap: 15px;">
+                <div>
+                    <label style="font-weight:bold; margin-bottom:5px; display:block;">Full Name <span
+                            style="color: red;">*</span></label>
+                    <input type="text" id="fullName" name="fullName" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: var(--border-radius-soft);"
+                        placeholder="Jane Doe">
+                </div>
+                <div>
+                    <label style="font-weight:bold; margin-bottom:5px; display:block;">Email Address <span
+                            style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: var(--border-radius-soft);"
+                        placeholder="jane@example.com">
+                </div>
+                <div>
+                    <label style="font-weight:bold; margin-bottom:5px; display:block;">Your Question or Concern <span
+                            style="color: red;">*</span></label>
+                    <textarea rows="5" id="question" name="question" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: var(--border-radius-soft);"
+                        placeholder="How can we help you today?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Inquiry</button>
+            </form>
+
+            <script>
+                document.getElementById('inquiryForm').addEventListener('submit', function (e) {
+                    e.preventDefault(); // Prevent actual form submission for now
+                    alert('Thank you for your inquiry! A pharmacist will be in touch shortly.');
+                    this.reset();
+                });
+            </script>
+        </div>
+    </div>
+</section>
+{% endblock %}
