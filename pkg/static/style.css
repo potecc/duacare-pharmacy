@@ -81,8 +81,13 @@ a:hover {
 
 .bg-green h1,
 .bg-green h2,
-.bg-green h3 {
+.bg-green h3,
+.bg-green p {
     color: white;
+}
+
+.bg-green p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Buttons */
