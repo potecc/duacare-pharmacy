@@ -52,15 +52,8 @@
         <div class="container">
             <a href="{{ url_for('home') }}" class="navbar-brand"
                 style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <img src="{{ url_for('static', filename='images/logo.png.png') }}" alt="Duacare Symbol"
-                    style="height: 48px;">
-                <div style="display: flex; flex-direction: column; line-height: 1.1;">
-                    <span
-                        style="font-family: var(--font-heading); font-size: 1.6rem; letter-spacing: 1.5px; font-weight: 700; color: var(--duacare-green);">DUACARE</span>
-                    <span
-                        style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--duacare-green);">Pharmacy
-                        & Stores</span>
-                </div>
+                <img src="{{ url_for('static', filename='images/new_logo.png.png') }}" alt="Duacare Pharmacy & Stores"
+                    style="height: 55px; width: auto; object-fit: contain;">
             </a>
 
             <div class="navbar-toggle">
@@ -106,16 +99,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-                        <img src="{{ url_for('static', filename='images/logo.png.png') }}" alt="Duacare Symbol"
-                            style="height: 48px; filter: brightness(0) invert(1);">
-                        <div style="display: flex; flex-direction: column; line-height: 1.1;">
-                            <span
-                                style="font-family: var(--font-heading); font-size: 1.6rem; letter-spacing: 1.5px; font-weight: 700; color: var(--duacare-white);">DUACARE</span>
-                            <span
-                                style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--duacare-white);">Pharmacy
-                                & Stores</span>
-                        </div>
+                    <div
+                        style="display: flex; align-items: center; margin-bottom: 20px; background-color: var(--duacare-white); border-radius: 8px; padding: 10px; display: inline-block;">
+                        <img src="{{ url_for('static', filename='images/new_logo.png.png') }}"
+                            alt="Duacare Pharmacy & Stores" style="height: 48px; width: auto; object-fit: contain;">
                     </div>
                     <p>Your Health, Our Priority.</p>
                     <p>For your everyday health and grocery needs.</p>
