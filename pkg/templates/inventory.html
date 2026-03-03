@@ -136,10 +136,13 @@
                 <h2 class="letter-heading">{{ letter }}</h2>
                 <div class="item-grid">
                     {% for item in items %}
-                    <div class="inventory-item">
-                        <i class="fa-solid fa-check"></i>
-                        <span>{{ item }}</span>
-                    </div>
+                    <a href="https://wa.me/2348080792764?text=Hello%20Duacare%20Pharmacy,%20I%20would%20like%20to%20order:%20{{ item | urlencode }}"
+                        target="_blank" style="text-decoration: none; display: block;">
+                        <div class="inventory-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>{{ item }}</span>
+                        </div>
+                    </a>
                     {% endfor %}
                 </div>
                 <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
