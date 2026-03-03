@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Store Inventory A-Z - Duacare Pharmacy{% endblock %}
+
+{% block extra_css %}
+<style>
+    .alphabet-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 30px 0;
+        padding: 20px;
+        background-color: var(--duacare-white);
+        border-radius: var(--border-radius-soft);
+        box-shadow: var(--box-shadow);
+        position: sticky;
+        top: 80px;
+        z-index: 100;
+        border: 1px solid #eaeaea;
+    }
+
+    .alphabet-nav a {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background-color: var(--duacare-light-grey);
+        color: var(--duacare-dark-green);
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+
+    .alphabet-nav a:hover {
+        background-color: var(--duacare-green);
+        color: var(--duacare-white);
+        transform: translateY(-2px);
+    }
+
+    .alphabet-nav a.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+        background-color: transparent;
+    }
+
+    .inventory-section {
+        margin-bottom: 50px;
+        scroll-margin-top: 150px;
+    }
+
+    .letter-heading {
+        font-size: 2.5rem;
+        color: var(--duacare-gold);
+        border-bottom: 3px solid var(--duacare-green);
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+        display: inline-block;
+        min-width: 60px;
+        text-align: center;
+    }
+
+    .item-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .inventory-item {
+        background: var(--duacare-white);
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid var(--duacare-green);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s ease;
+    }
+
+    .inventory-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .inventory-item i {
+        color: var(--duacare-gold);
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+
+    .inventory-item span {
+        font-weight: 500;
+        color: var(--text-primary);
+    }
+
+    .back-to-top {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero bg-green" style="padding: 60px 0;">
+    <div class="container text-center">
+        <h1 style="color: var(--duacare-white);">Store Inventory (A-Z)</h1>
+        <p style="color: var(--duacare-white);">Browse our comprehensive range of pharmacy, health, and everyday grocery
+            items alphabetically.</p>
+    </div>
+</section>
+
+<!-- Main Inventory Layout -->
+<section class="section">
+    <div class="container">
+
+        <!-- A-Z Navigation Sticky Bar -->
+        <div class="alphabet-nav">
+            {% for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
+            {% if letter in inventory %}
+            <a href="#letter-{{ letter }}">{{ letter }}</a>
+            {% else %}
+            <a href="#" class="disabled">{{ letter }}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Inventory List Grouped by Letter -->
+        <div class="inventory-container">
+            {% for letter, items in inventory.items() %}
+            <div id="letter-{{ letter }}" class="inventory-section">
+                <h2 class="letter-heading">{{ letter }}</h2>
+                <div class="item-grid">
+                    {% for item in items %}
+                    <div class="inventory-item">
+                        <i class="fa-solid fa-check"></i>
+                        <span>{{ item }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+<!-- Call to action -->
+<section class="section text-center" style="background-color: var(--duacare-light-grey); margin-top: 40px;">
+    <div class="container">
+        <h2>Can't find what you're looking for?</h2>
+        <p style="max-width: 600px; margin: 0 auto; margin-bottom: 25px;">Our inventory is constantly expanding. Chat
+            with a pharmacist to check for immediate stock availability or to place a special order.</p>
+        <a href="https://wa.me/2348080792764" target="_blank" class="btn btn-primary" style="font-size: 1.1rem;"><i
+                class="fa-brands fa-whatsapp"></i> Chat with Us</a>
+    </div>
+</section>
+{% endblock %}
